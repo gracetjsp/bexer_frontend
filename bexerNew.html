@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="popper.min.js"></script>
+  <style>
+    .top-header p:hover {
+      color: #86c33a;
+      ;
+    }
+
+    /* .top-header p::selection ::after{
+            color:  #86c33a;
+
+        } */
+    .nav-link {
+      color: black !important;
+      font-weight: 700;
+    }
+
+    .nav-link:hover {
+      color: #86c33a !important;
+    }
+
+    .position-overlay {
+      text-align: justify;
+    }
+
+    .top-card {
+      background: white;
+    }
+
+    .top-card p {
+      color: gray;
+    }
+
+    .top-card i {
+      color: #86c33a;
+    }
+
+    .active,
+    .active p,
+    .active i {
+      background: #252d39;
+      color: white !important;
+    }
+
+    .top-card:hover,
+    .top-card:hover p,
+    .top-card:hover i {
+      background: #252d39;
+      color: white !important;
+
+    }
+
+
+    .water-wave {
+      height: 100px;
+      width: 100px;
+      display: inline-block;
+      justify-content: center;
+    }
+
+    .button1 a {
+      background: #86c33a;
+      color: white !important;
+      font-weight: 700;
+    }
+
+
+    .button-overlay a {
+      border: 2px solid black;
+    }
+
+    .button-overlay a:hover {
+      background: #86c33a;
+      color: white;
+      border: 0;
+    }
+
+
+
+    @media (min-width: 991.98px) {
+      .large-border {
+        border-left: 1px solid white;
+
+      }
+
+    }
+
+
+
+    .selection {
+      padding-top: 150px;
+      padding-bottom: 250px;
+    }
+
+    .circle-icon {
+      background: #86c33a;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .circle-icon {
+        transform: translateY(-90px);
+      }
+
+
+    @media (max-width: 575.98px) {
+     
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+     
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    
+    }
+
+    @media (min-width: 1200px) {
+    
+    }
+
+    .hover-icon:hover {
+      background-color: rgba(134, 195, 58, 0.9);
+    }
+
+    .hover-ripple i {
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+    }
+
+    .hover-ripple:hover i,
+    .hover-ripple:hover li,
+    .hover-ripple:hover a {
+      background: white;
+      color: #86c33a;
+
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay1 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgba(134, 195, 58, 0.9);
+    }
+
+    .overlay1:hover {
+      opacity: 1;
+    }
+
+    .text,
+    .text i {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      font-weight: 600 !important;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+      opacity: 1;
+      color: white !important;
+      /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: white !important;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: white !important;
+    }
+
+    body p::selection,
+    body h1::selection,
+    body h2::selection,
+    body h3::selection,
+    body h4::selection,
+    body h6::selection,
+    body a::selection,
+    body li::selection,
+    body h5::selection,
+    body span::selection {
+      background: #86c33a;
+      color: white;
+
+    }
+
+    .footer-icon i {
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+    }
+
+    
+    .footer-icon:hover i,
+    .footer-icon:hover li,
+    .footer-icon:hover a {
+      background: #86c33a;
+      color: white;
+
+    }
+
+    .selection-title-border {
+      display: block;
+      width: 30px;
+      height: 5px;
+      border-radius: 10px;
+      background: #86c33a;
+      position: relative;
+
+    }
+
+    .selection-title-border::after {
+      position: absolute;
+      content: '';
+      width: 25%;
+      height: 100%;
+      border-radius: 10px;
+      background: #86c33a;
+      top: 0;
+      right: -100%;
+
+
+    }
+
+    .selection-title-border::before {
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 100%;
+      border-radius: 10px;
+      background: #86c33a;
+      top: 0;
+      right: -60%;
+
+
+    }
+  </style>
+
+
+</head>
+<header>
+  <div class="top-header " style="background: #252d39;">
+    <div class=" container-fluid">
+      <div class="row text-center">
+        <div class="col-12 col-md-6 col-lg-6 pt-2 pb-2">
+          <div class="text-white list-inline-item justify-content-center">
+
+            <span class="d-inline-block">Connect With Us:</span>
+            <p class="d-inline-block ps-2 pe-2"><i class="fab fa-facebook-f"></i></p>
+            <p class="d-inline-block ps-2 pe-2"><i class="fab fa-twitter"></i></i></p>
+            <p class="d-inline-block ps-2 pe-2"><i class="fa fa-rss"></i></p>
+            <p class="d-inline-block ps-2 pe-2"><i class="fab fa-google"></i></p>
+            <p class="d-inline-block ps-2 pe-2"><i class="fab fa-vimeo-v"></i></p>
+
+
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 pt-2 pb-2">
+          <div class="text-white list-inline-item ">
+            <p class="d-inline-block ps-2 pe-2">info@bexar.com</p>
+            <p class="d-inline-block ps-2 pe-2" style="border-left:1px solid white">Call Us Now:<span
+                style="color: #86c33a;"> 123 456 5523</span></p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <div class="container">
+        <a class="navbar-brand"><img src="logo.png" class="container-fluid p-2 p-lg-0 p-xl-2"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto ms-auto  mb-2 mb-lg-0 " style="text-align: center;">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  p-3  p-lg-1 p-xl-3" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                HOME
+              </a>
+              <ul class="dropdown-menu border-0 p-3" aria-labelledby="navbarDropdown" style="text-align: center;">
+                <li><a class="dropdown-item" href="bexerNew.html">HomePage1</a></li>
+                <li><a class="dropdown-item" href="homePage2.html">HomePage2</a></li>
+                <li><a class="dropdown-item" href="#">HomePage3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle p-3  p-lg-1 p-xl-3" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                ABOUT US
+              </a>
+              <ul class="dropdown-menu border-0 p-3" aria-labelledby="navbarDropdown" style="text-align: center;">
+                <li><a class="dropdown-item" href="#">About Us1</a></li>
+                <li><a class="dropdown-item" href="#">About Us2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle p-3  p-lg-1 p-xl-3" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                BLOG
+              </a>
+              <ul class="dropdown-menu border-0 p-3" aria-labelledby="navbarDropdown" style="text-align: center;">
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+                <li><a class="dropdown-item" href="#">Blog Sidebar</a></li>
+                <li><a class="dropdown-item" href="#">Blog Details</a></li>
+              </ul>
+            </li>
+            <a class="nav-link p-3  p-lg-1 p-xl-3" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              CONTACT
+            </a>
+
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle p-3  p-lg-1 p-xl-3" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                PAGES
+              </a>
+              <ul class="dropdown-menu border-0 p-3" aria-labelledby="navbarDropdown" style="text-align: center;">
+                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="#">Case Study</a></li>
+                <li><a class="dropdown-item" href="#">Project Details</Details></a></li>
+                <li><a class="dropdown-item" href="#">Service1</a></li>
+                <li><a class="dropdown-item" href="#">Service2</a></li>
+                <li><a class="dropdown-item" href="#">Service Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle p-3  p-lg-1 p-xl-3" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                SHORTCODE
+              </a>
+              <ul class="dropdown-menu border-0 p-3" aria-labelledby="navbarDropdown" style="text-align: center;">
+                <li><a class="dropdown-item" href="#">Buttons</a></li>
+                <li><a class="dropdown-item" href="#">Icons</a></li>
+                <li><a class="dropdown-item" href="#">Typography</Details></a></li>
+                <li><a class="dropdown-item" href="#">Blog Contents</a></li>
+                <li><a class="dropdown-item" href="#">Service Contents</a></li>
+                <li><a class="dropdown-item" href="#">Team Contents</a></li>
+              </ul>
+            </li>
+
+
+
+          </ul>
+          <div class="search border-0 ps-5 pe-5 p-lg-1" style="text-align: center;">
+            <button id="search-open border-none" class="search-button text-center" style="border: 0; background: #ffffff;">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <form class="d-flex justify-content-center pt-2 pt-md-0">
+
+            <button class="btn rounded-pill ps-4 pe-4 pt-3 pb-3  p-lg-2 p-xl-3" type="submit"
+              style="background:#86c33a ; color: white; font-weight: 500;">GET STARTED</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+<body>
+  <div class="row p-0 m-0">
+    <div class="container-fluid p-0">
+      <div class="row p-0 m-0">
+        <div
+          style="background-image: url(banner-1.jpg);height: 100vh;background-position: center;background-size: cover;">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-12 overlay position-absolute">
+
+      <div class="container pt-5 pb-2">
+        <div class="row p-0 pt-5 pb-5">
+          <div class="col-12 col-lg-6 pt-5 pb-5">
+            <h5 class="text-uppercase  ">We are here to</h5>
+            <h1 class="display-4 text-uppercase" style="font-weight: 600;">Planning Business</h1>
+            <p style="color: grey;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua.</p>
+            <div class="button-overlay">
+              <a class="btn rounded-pill text-uppercase p-2 pe-3 ps-3">more details</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="translate-top" style="  transform: translateY(-75px);">
+    <div class="container p-0">
+      <div class=" row p-0 m-0">
+        <div class="col-12 col-sm-6 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+          <div
+            class="card me-2 ms-2 top-card h-100 border-0 text-center pt-5 pb-5 ps-2 pe-2 shadow-lg back-dark active">
+            <div class="icon-bg water-wave fs-1 m-auto mb-2">
+              <i class="far fa-gem m-auto text-center"></i>
+
+            </div>
+            <div class="card-title">
+              <h4>BUSINESS SOLUTION</h4>
+            </div>
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet constur adipelit sed.</p>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="card me-2 ms-2 top-card h-100 border-0 text-center pt-5 pb-5 ps-2 pe-2 shadow-lg back-dark">
+            <div class="icon-bg water-wave fs-1 m-auto mb-2">
+
+              <i class="fas fa-chart-bar m-auto text-center"></i>
+
+            </div>
+            <div class="card-title">
+              <h4>MARKET RESEARCH
+              </h4>
+            </div>
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet constur adipelit sed.</p>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="card me-2 ms-2 top-card h-100 border-0 text-center pt-5 pb-5 ps-2 pe-2 shadow-lg back-dark">
+            <div class="icon-bg water-wave fs-1 m-auto mb-2">
+              <i class="fas fa-lightbulb m-auto text-center"></i>
+
+            </div>
+            <div class="card-title">
+              <h4>BUSINESS STRATEGY
+              </h4>
+            </div>
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet constur adipelit sed.</p>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="card me-2 ms-2 top-card h-100 border-0 text-center pt-5 pb-5 ps-2 pe-2 shadow-lg back-dark">
+            <div class="icon-bg water-wave fs-1 m-auto mb-2">
+              <i class="fas fa-tachometer-alt m-auto text-center"></i>
+
+            </div>
+            <div class="card-title">
+              <h4>SPEED OPTIMIZATION
+              </h4>
+            </div>
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet constur adipelit sed.</p>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="container p-0">
+    <div class="row p-0 m-0 justify-content-between">
+      <div class="col-12 col-md-5 pt-5 pt-md-3">
+
+        <img src="about-us.png" class="img-fluid">
+
+      </div>
+      <div class="col-12 col-md-6 pt-5">
+
+        <div class="card about bg-transparent border-0">
+          <div class="col-3" style="color: grey;">
+            <span class="selection-title-border"></span>
+
+            <h5 class="pt-3" style="color: grey;">About Us
+
+
+            </h5>
+          </div>
+          <div class="card-title">
+            <h1 style="font-weight:700;">WE ARE DYNAMIC TEAM AND BUSINESS AGENCY
+            </h1>
+          </div>
+          <div class="card-body">
+            <p style="color: gray;">Excepteur sint occaecat cupidatat non proident sunt iculpa qui officia deserunt
+              mollit anim est. laborum sed perspiciatis unde omnis natus error sit voluptatem accusantium.
+
+            </p>
+            <div class="button1">
+              <a class="btn rounded-pill text-uppercase p-2">more details</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container-md container-fluid-sm p-0 pt-2 pb-2  m-0" style="background: #252d39;">
+    <div class="row p-0 m-0 ">
+      <div class="col-12 col-sm-6 col-md-3 ps-lg-5 p-0">
+        <div class="row m-0 p-0 large-border">
+          <div class="col-3 m-auto p-0 pt-1 pb-1 pt-md-4 pb-md-4" style="text-align: center;">
+            <i class="fas fa-bullseye" style="color:#86c33a;font-size: 56px;"></i>
+          </div>
+          <div class="col-9 text-white p-0 pt-1 pb-1 pt-lg-4 pb-lg-4 ">
+            <h1 style="font-weight: 700;">50+</h1>
+            <h6>Projects Done</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 p-0 ">
+        <div class="row m-0 p-0">
+          <div class="col-3 m-auto p-0 pt-1 pb-1 pt-lg-4 pb-lg-4" style="text-align: center;">
+            <i class="fas fa-calendar-alt" style="color:#86c33a;font-size: 56px;"></i>
+          </div>
+          <div class="col-9 text-white p-0 pt-1 pb-1 pt-lg-4 pb-lg-4">
+            <h1 style="font-weight: 700;">25+</h1>
+            <h6>Years Experience</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 p-0">
+        <div class="row m-0 p-0">
+          <div class="col-3 m-auto p-0 pt-1 pb-1 pt-lg-4 pb-lg-4" style="text-align: center;">
+            <i class="fas fa-trophy" style="color:#86c33a;font-size: 56px;"></i>
+          </div>
+          <div class="col-9 text-white p-0 pt-1 pb-1 pt-lg-4 pb-lg-4">
+            <h1 style="font-weight: 700;">250+</h1>
+            <h6>Awards Win</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 p-0">
+        <div class="row m-0 p-0">
+          <div class="col-3 m-auto p-0 pt-1 pb-1 pt-lg-4 pb-lg-4" style="text-align: center;">
+
+            <i class="far fa-smile" style="color:#86c33a;font-size: 56px;"></i>
+          </div>
+          <div class="col-9 text-white p-0 pt-1 pb-1 pt-lg-4 pb-lg-4">
+            <h1 style="font-weight: 700;">500+</h1>
+            <h6>Happy Coustomers</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="container p-0 pt-5 reason">
+    <div class="row p-0 m-0 justify-content-end">
+
+
+      <div class="col-12 col-md-5">
+        <div class="card bg-transparent border-0">
+
+          <span class="selection-title-border flex-row justify-content-center"></span>
+
+          <h5 class="pt-2" style="color: gray;">Why Choose Us
+
+          </h5>
+          <div class="card-title">
+            <h1>WHY THEY CHOOSE BEXAR</h1>
+          </div>
+          <div class="card-body p-0">
+            <p style="color: gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius tempor
+              incididunt ut labore.
+            </p>
+            <div class="d-flex flex-row">
+              <div class="p-3 m-auto">
+                <i class="far fa-snowflake fs-1" style="color: #86c33a;"></i>
+
+              </div>
+              <div class="p-3">
+                <h4>CREATIVE DESIGN
+                </h4>
+                <p style="color: gray;text-align: justify;">Excepteur sint occaecat cupidatat non proident sunt in culpa
+                  qui officia.
+                </p>
+              </div>
+
+            </div>
+            <div class="d-flex flex-row">
+              <div class="p-3 m-auto">
+                <i class="fas fa-code fs-1" style="color: #86c33a;"></i>
+              </div>
+              <div class="p-3">
+                <h4>PIXEL PERFECT CODING
+                </h4>
+                <p style="color: gray;text-align: justify;">Excepteur sint occaecat cupidatat non proident sunt in culpa
+                  qui officia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="feature.jpg" class="img-fluid">
+
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid p-0 m-0" style="background: linear-gradient(to right,#f5f6fa 45%, #fff 0%);">
+    <div class="selection" style="background: #252d39;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="d-flex justify-content-center">
+              <span class="selection-title-border"></span>
+
+            </div>
+
+
+            <h5 class="pt-2" style="color: gray;">Best Service
+
+            </h5>
+            <h1 style="color: white;">SERVICE WE PROVIDE
+            </h1>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="translate-top" style="  transform: translateY(-100px);">
+      <div class="container">
+        <div class="row m-0 p-0">
+
+          <div class=" col-12 col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card border-0 rounded-0 shadow-lg h-100 ms-4 me-4">
+              <div class="card-img">
+                <img src="service-1.jpg" class="img-fluid w-100">
+              </div>
+              <div class="card-body">
+                <i class="fas fa-chart-bar fs-1 position-absolute circle-icon" style="color: white;"></i>
+                <h5 style="font-weight: 700;">MARAKET ANALYSIS</h5>
+                <p style="color: gray;">Lorem ipsum dolor sit amet, consecte tur adipis elit sed eiusmod.</p>
+              </div>
+
+            </div>
+          </div>
+          <div class=" col-12 col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card border-0 rounded-0 shadow-lg h-100 ms-4 me-4">
+              <div class="card-img">
+                <img src="service-1.jpg" class="img-fluid w-100">
+              </div>
+              <div class="card-body">
+                <i class="fas fa-chart-bar fs-1 position-absolute circle-icon" style="color: white;"></i>
+                <h5 style="font-weight: 700;">MARAKET ANALYSIS</h5>
+                <p style="color: gray;">Lorem ipsum dolor sit amet, consecte tur adipis elit sed eiusmod.</p>
+              </div>
+
+            </div>
+          </div>
+          <div class=" col-12 col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card border-0 rounded-0 shadow-lg h-100 ms-4 me-4">
+              <div class="card-img">
+                <img src="service-1.jpg" class="img-fluid w-100">
+              </div>
+              <div class="card-body">
+                <i class="fas fa-chart-bar fs-1 position-absolute circle-icon" style="color: white;"></i>
+                <h5 style="font-weight: 700;">MARAKET ANALYSIS</h5>
+                <p style="color: gray;">Lorem ipsum dolor sit amet, consecte tur adipis elit sed eiusmod.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center pt-5 pb-5">
+          <div class="d-flex justify-content-center">
+            <span class="selection-title-border"></span>
+          </div>
+          <h4 class="pt-2" style="color: gray;font-weight: 600;">Our Team
+          </h4>
+          <h1 style="font-weight: 700;">WE ARE DYNAMIC TEAM AND <br>
+            BUSINESS AGENCY
+          </h1>
+        </div>
+        <div class=" col-12 col-sm-6 col-lg-4">
+          <div class="card border-0 bg-transparent text-center team-member ms-4 me-4">
+            <div class="card-img p-0 m w-100">
+              <img src="team-1.jpg" class="img-fluid w-100">
+              <div class="hover-icon pt-3 position-absolute w-100" style="left: 0; bottom: 0;">
+                <ul class="d-flex flex-row social-icons ps-0  justify-content-around">
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+
+                      <i class="fab fa-facebook p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-twitter p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-linkedin-in p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-pinterest p-3"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-center mt-5 ms-4 me-4">
+            <h3 class="text-uppercase">Frederick Satterfield</h3>
+            <h6 style="color: gray;">Designer</h6>
+          </div>
+        </div>
+        <div class=" col-12 col-sm-6 col-lg-4">
+          <div class="card border-0 bg-transparent text-center team-member ms-4 me-4">
+            <div class="card-img p-0 m w-100">
+              <img src="team-2.jpg" class="img-fluid w-100">
+              <div class="hover-icon pt-3 position-absolute w-100" style="left: 0; bottom: 0;">
+                <ul class="d-flex flex-row social-icons ps-0  justify-content-around">
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+
+                      <i class="fab fa-facebook p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-twitter p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-linkedin-in p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-pinterest p-3"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-center mt-5 ms-4 me-4">
+            <h3 class="text-uppercase">Jaqueline Hamberger</h3>
+            <h6 style="color: gray;">Project Manager</h6>
+          </div>
+        </div>
+        <div class=" col-12 col-sm-6 col-lg-4">
+          <div class="card border-0 bg-transparent text-center team-member ms-4 me-4">
+            <div class="card-img p-0 m w-100">
+              <img src="team-3.jpg" class="img-fluid w-100">
+              <div class="hover-icon pt-3 position-absolute w-100" style="left: 0; bottom: 0;">
+                <ul class="d-flex flex-row social-icons ps-0  justify-content-around">
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+
+                      <i class="fab fa-facebook p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-twitter p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-linkedin-in p-3"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-center">
+                    <a href="#" class="hover-ripple">
+                      <i class="fab fa-pinterest p-3"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-center mt-5 ms-4 me-4">
+            <h3 class="text-uppercase">Michelle Fischer</h3>
+            <h6 style="color: gray;">Developer</h6>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div>
+      <div class="container mt-5">
+        <div class="row p-0 m-0">
+          <div class="col-12 col-md-8">
+            <div class=" ms-4 me-4 pt-2  mb-4">
+            <span class="selection-title-border"></span>
+
+              <h4  class="pt-2"style="color: gray;">Case Study</h4>
+              <h1 style="font-weight: 700;">BEXAR CASE STUDIES</h1>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex justify-content-end align-self-end mb-4">
+            <div class="button1">
+              <a class="btn rounded-pill p-2 text-uppercase">More projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row p-0">
+
+          <div class="col-12 col-sm-6 col-lg-3 p-0 project">
+            <div class="card bg-transparent border-0">
+              <div class="w-100 h-100 position-relative">
+
+                <img src="project-1.jpg" alt="Avatar" class="image">
+                <div class="overlay1 w-100 h-auto" style="display: block;">
+                  <div class="text"> <i class="fas fa-plus" style="color: white;"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex pt-5 pb-2 flex-column ms-4 ">
+              <p class="h5" style="color: #86c33a;">BUSINESS SOLUTION
+              </p>
+              <h4 class="text-uppercase">Art Institute of Chicago</h4>
+
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 p-0 project">
+            <div class="card bg-transparent border-0">
+              <div class="w-100 h-100 position-relative">
+
+                <img src="project-2.jpg" alt="Avatar" class="image">
+                <div class="overlay1 w-100 h-auto" style="display: block;">
+                  <div class="text"> <i class="fas fa-plus" style="color: white;"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex pt-5  pb-2 flex-column ms-4 ">
+              <p class="h5" style="color: #86c33a;">DIGITAL MARKETING
+
+              </p>
+              <h4 class="text-uppercase">Essential Looks Trend Report</h4>
+
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 p-0 project">
+            <div class="card bg-transparent border-0">
+              <div class="w-100 h-100 position-relative">
+
+                <img src="project-3.jpg" alt="Avatar" class="image">
+                <div class="overlay1 w-100 h-auto" style="display: block;">
+                  <div class="text"> <i class="fas fa-plus" style="color: white;"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex pt-5  pb-2 flex-column ms-4 ">
+              <p class="h5" style="color: #86c33a;">FINACIAL ANALYTSIS
+
+              </p>
+              <h4 class="text-uppercase">Carpe Diem Santorini</h4>
+
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3  p-0 project">
+            <div class="card bg-transparent border-0">
+              <div class="w-100 h-100 position-relative">
+
+                <img src="project-4.jpg" alt="Avatar" class="image">
+                <div class="overlay1 w-100 h-auto" style="display: block;">
+                  <div class="text"> <i class="fas fa-plus" style="color: white;"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex pt-5  pb-2 flex-column ms-4 ">
+              <p class="h5" style="color: #86c33a;">MARKETING STRATEGY
+
+              </p>
+              <h4 class="text-uppercase">Celebrate with Stoli</h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pt-5 client" style="background: #f5f6fa;">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="d-flex justify-content-center">
+        <span class="selection-title-border"></span>
+        </div>
+
+        <h4 class="pt-2" style="color: gray;">Testimonials</h4>
+        <h1 style="font-weight: 700;">WHAT CLIENTS ARE SAY?</h1>
+      </div>
+      <div class="col-12">
+        <div class=" w-75 m-auto">
+          <div class=" pt-5 pb-5 d-flex justify-content-center">
+            <img src="client-3.jpg" style="border-radius: 50%;">
+          </div>
+          <div class="pb-5 h4 text-i fst-italic d-flex justify-content-center" style="color: gray;font-weight:400;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+              eiusmod tempor incididunt ut labore dolore magna aliqua.enim ad minim veniam.quis nostrud exercitation
+              ullamco laboris nis aliquip ex ea commodo consequat. duis aute irure dolor in reprehen.</p>
+          </div>
+          <div class="pt-3 pb-5 mb-5 +m-auto text-center">
+            <h4 class="text-uppercase">Alex Pitt</h4>
+            <p class="h5" style="color: #86c33a;">Designer</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid p-0">
+    <div class="h-100 w-100 position-relative">
+      <div
+        style="width: 100%;background-size: cover; background-position: center;overflow: hidden; min-height: 350px;background-image: url(cta-lg.jpg);">
+      </div>
+      <div class="position-absolute h-100 w-100" style="z-index: 1;top: 0;left: 0; background:#252d39;opacity: 0.8;">
+      </div>
+      <div class="position-absolute h-100 w-100" style="z-index: 3;top: 0;left: 0;color: white;">
+
+        <div class="container p-0 d-flex justify-content-center ">
+          <div class="row p-0 m-0 text-center position-absolute pb-5">
+            <h1 class="p-5 mt-5 mb-2">BEXAR GIVE THE SMART SOLUTION <br>FOR YOUR BUSINESS
+            </h1>
+            <div class="button1">
+              <a class="btn rounded-pill p-2 text-uppercase">More projects</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-0" style="background: linear-gradient(to right,#f5f6fa 45%, #fff 0%);">
+    <div class="container pt-5">
+      <div class="row p-0 m-0 pt-5">
+        <div class="pt-5">
+          <span class="selection-title-border"></span>
+
+          <p class="h5 pt-2" style="color: gray;">Latest News
+          </p>
+          <h2 class="h1" style="font-weight: 700;">LEARN FROM BEXAR
+          </h2>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 pt-5 p-0 mb-4">
+          <div class="card ms-4 me-4  border-0 rounded-0 shadow-lg position-relative">
+            <div class="card-article"
+              style="position: absolute;top: 30px;left: 30px;background: #86c33a;padding: 3px 8px;z-index: 1;color: white;">
+              Article</div>
+            <img class="card-img-post" src="post-1.jpg">
+            <div class="card-body-post ps-4 pe-4">
+              <p class="text-uppercase" style="color: gray;">by <span
+                  style="color: black;"><strong>admin</strong></span> / on <span style="color: black;"><strong>1 sep
+                    ,2018</strong></span></p>
+
+              <h6 class="text-uppercase" style="font-weight: 700;">elit duied aiusmod tempor did labore dolory</h6>
+            <span class="selection-title-border"></span>
+              
+              <p class="pt-4" style="color: grey;">Excepteur sint ocacat cupidatat non proi dent sunt in culpa qui
+                officia deserunt. mollit anim id est laborum. sed ut pers piciatis unde omnis iste natus error. sit
+                voluptatem.
+
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 pt-5 p-0 mb-4">
+          <div class="card ms-4 me-4  border-0 rounded-0 shadow-lg position-relative">
+            <div class="card-article"
+              style="position: absolute;top: 30px;left: 30px;background: #86c33a;padding: 3px 8px;z-index: 1;color: white;">
+              Article</div>
+            <img class="card-img-post" src="post-2.jpg">
+            <div class="card-body-post ps-4 pe-4">
+              <p class="text-uppercase" style="color: gray;">by <span
+                  style="color: black;"><strong>admin</strong></span> / on <span style="color: black;"><strong>2 sep
+                    ,2018</strong></span></p>
+
+              <h6 class="text-uppercase" style="font-weight: 700;">elit duied aiusmod tempor did labore dolory</h6>
+            <span class="selection-title-border"></span>
+              
+              <p class="pt-4" style="color: grey;">Excepteur sint ocacat cupidatat non proi dent sunt in culpa qui
+                officia deserunt. mollit anim id est laborum. sed ut pers piciatis unde omnis iste natus error. sit
+                voluptatem.
+
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 pt-5 p-0 mb-4">
+          <div class="card ms-4 me-4  border-0 rounded-0 shadow-lg position-relative">
+            <div class="card-article"
+              style="position: absolute;top: 30px;left: 30px;background: #86c33a;padding: 3px 8px;z-index: 1;color: white;">
+              Article</div>
+            <img class="card-img-post" src="post-3.jpg">
+            <div class="card-body-post ps-4 pe-4">
+              <p class="text-uppercase" style="color: gray;">by <span
+                  style="color: black;"><strong>admin</strong></span> / on <span style="color: black;"><strong>3 sep
+                    ,2018</strong></span></p>
+
+              <h6 class="text-uppercase" style="font-weight: 700;">elit duied aiusmod tempor did labore dolory</h6>
+            <span class="selection-title-border"></span>
+             
+              <p class="pt-4" style="color: grey;">Excepteur sint ocacat cupidatat non proi dent sunt in culpa qui
+                officia deserunt. mollit anim id est laborum. sed ut pers piciatis unde omnis iste natus error. sit
+                voluptatem.
+
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+<section class="">
+  <!-- Footer -->
+  <footer class="text-white text-center text-md-start pt-5" style="background: #252d39;">
+    <!-- Grid container -->
+    <div class="container ">
+      <!--Grid row-->
+      <div class="row p-0 m-0 justify-content-between">
+        <!--Grid column-->
+        <div class="col-lg-5  mb-4 mb-lg-0">
+          <div class="pt-5 pb-3 ps-5 pe-5">
+            <img src="logo-alt.png">
+          </div>
+          <p>
+            Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt ut labore dolore magna
+            aliqua enim ad minim veniam quis nostrud exercitation ullamaboris nisi ut aliquip.exea commodo consequat.
+            Duis aute irure dolor in reprehenderit.
+            <br>
+            <br>
+            Deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+
+
+          </p>
+          <div class="mb-4">
+            <ul class="d-flex flex-row social-icons ps-0  justify-content-start">
+              <li class="list-inline-item text-center">
+                <a href="#" class="footer-icon">
+
+                  <i class="fab fa-facebook p-3"></i>
+                </a>
+              </li>
+              <li class="list-inline-item text-center">
+                <a href="#" class="footer-icon">
+                  <i class="fab fa-twitter p-3"></i>
+                </a>
+              </li>
+              <li class="list-inline-item text-center">
+                <a href="#" class="footer-icon">
+                  <i class="fab fa-linkedin-in p-3"></i>
+                </a>
+              </li>
+              <li class="list-inline-item text-center">
+                <a href="#" class="footer-icon">
+                  <i class="fab fa-pinterest p-3"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!--Grid column-->
+        <div class="col-lg-6 mb-5 p-0">
+          <div class="pt-5  d-flex flex-row">
+            <!--Grid column-->
+            <div class="col-6 mb-5 d-flex flex-column  text-start w-50">
+              <h5 class="text-uppercase  d-flex flex-column pb-3">SERVICES
+              </h5>
+
+              <ul class="list-unstyled mb-0">
+                <li class="mb-3">
+                  <a href="#!" class="text-white"><i class="fas fa-greater-than pe-2"></i>Company History</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#!" class="text-white mb-3"><i class="fas fa-greater-than pe-2"></i>About Us</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#!" class="text-white mb-3"><i class="fas fa-greater-than pe-2"></i>Contact Us</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#!" class="text-white mb-3"><i class="fas fa-greater-than pe-2"></i>Services</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#!" class="text-white mb-3"><i class="fas fa-greater-than pe-2"></i>Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-6 mb-5 d-flex flex-column text-start w-50">
+              <h5 class="text-uppercase mb-0 d-flex flex-column pb-3">CONTACT INFO
+              </h5>
+
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <a href="#!" class="text-white pb-3">9567 Turner Trace Apt. 466 North Willie, BC C3G8A4
+                  </a>
+                </li>
+                <li class="mb-3">
+                  <a href="#!" class="text-white pb-3">+21 123 456 5523
+                  </a>
+                </li>
+                <li class="mb-3">
+                  <a href="#!" class="text-white pb-3">info@bexar.com
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <h3 class="text-start">SUBSCRIBE NEWSLETTER</h3>
+
+          <!--Grid column-->
+          <div class="pt-5 pb-5 d-flex flex-row w-100 footer-mail">
+            <!-- Email input -->
+            <div class="form-outline mb-4 d-flex w-75">
+              <input type="email" placeholder="enter email id" id="form5Example2"
+                class="form-control ps-5 pe-4 pt-3 pb-3"
+                style="border-radius: 5em 0 0 5em;border: 0;background: rgba(255, 255, 255, 0.1);color: white;" />
+            </div>
+            <button type="submit" class="btn btn-primary text-uppercase mb-4  pt-3 pb-3"
+              style="border-radius:  0 5em 5em 0;background: yellowgreen; color: white;border: 0;font-weight: 600;">
+              Subscribe
+            </button>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class=" pt-5 pb-5" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="container d-flex flex-row">
+        <div class="col-6">
+          <span style="color: #86c33a;">Bexar</span>© 2021 All Right Reserved
+        </div>
+        <div class="col-6 justify-content-end d-flex flex-row">
+
+          <p class="ps-3 pe-3" style="border-right: 1px solid white;">Terms of Service</p>
+          <p class="ps-3 pe-3">Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</section>
+
+
+</html>

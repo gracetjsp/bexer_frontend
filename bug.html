@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+    <style>
+        .greenMonthYearButton {
+            background-color: #86c33a;
+            min-width: 100px;
+        }
+
+        .element .inactive {
+            color: gray !important;
+            font-weight: 700;
+        }
+
+        .element .active {
+            color: #252d39 !important;
+            font-weight: 700;
+            background: white;
+
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(Barlow/Barlow-Bold.ttf);
+        }
+
+        .whiteButton a {
+            font-family: "myFirstFont";
+        }
+
+        .whiteButton a:hover {
+            color: white !important;
+            background-color: #86c33a !important;
+            border-color: white;
+        }
+
+        .greenboxwhiteButton a {
+            background: white;
+            font-family: "myFirstFont";
+            border: 3px solid white !important;
+
+
+        }
+
+        .greenboxwhiteButton a:hover {
+            color: white !important;
+            background-color: #86c33a !important;
+            border: 3px solid white !important;
+
+        }
+
+        .monthlyactive a {
+            text-decoration: none !important;
+            background: white;
+            color: #252d39;
+            font-weight: 600;
+        }
+
+        .yearlyactive a {
+            text-decoration: none !important;
+            background: white;
+            color: #252d39;
+            font-weight: 600;
+
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".monthlyactive a,.monthly button").click(function () {
+                $('.monthlyactive a').css("color", "black");
+                $('.yearlyactive a').css("color", "gray");
+                $('.yearly').hide();
+                $('.year').hide();
+                $('.month').show();
+                $('.monthly').show();
+
+            });
+            $(".yearlyactive a,.yearly button").click(function () {
+                $('.monthlyactive a').css("color", "gray");
+                $('.yearlyactive a').css("color", "black");
+                $('.monthly').hide();
+                $('.yearly').show();
+                $('.month').hide();
+                $('.year').show();
+               
+            });
+
+        })
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="container pt-5">
+        <div class="row p-0 m-0">
+            <div class="col-12 text-center pb-5">
+                <span class="selection-title-green-border border-center"></span>
+                <h4 class="pt-2" style="color: gray;">Pricing Table </h4>
+                <h1 style="font-weight: 700; font-family:'myFirstFont'">BEST PRICE EVER
+                </h1>
+
+                <ul class="pt-5 element d-flex flex-row justify-content-center p-0" id="greenbutton">
+                    <input type="hidden" value="true" id="hiddenValue">
+                    <li class="p-1 pe-3 monthlyactive" style="list-style-type: none;">
+                        <a class="p-3">MOTHLY</a>
+                    </li>
+                    <ul class="greenMonthYearButton d-flex flex-row rounded-pill p-0 justify-content-between"
+                        style="list-style-type: none;">
+                        <li class="ps-1 pb-1 monthly" style="list-style-type: none;">
+                            <button class=" p-3 border-0" style="border-radius: 50%;background: white;"></button>
+                        </li>
+                        <li class="pe-1 pb-1" style="list-style-type: none;">
+                            <button class=" p-3 border-0 yearly" style="border-radius: 50%;background: white;"></button>
+                        </li>
+
+                    </ul>
+                    <li class="p-1 ps-3 yearlyactive" style="list-style-type: none;">
+                        <a class="p-3">YEARLY</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-12 col-md-4 p-md-0 month">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $39.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 month">
+                <div class="card rounded-0 whiteCard border-0 text-center text-white" style="background: #86c33a;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid white;">
+                            <h4 class="pb-5"> Popular
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+
+
+                                $49.99
+
+                            </h1>
+                            <h6>BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="greenboxwhiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 rounded-pill">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 month">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $39.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 p-md-0 year">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $39.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 year">
+                <div class="card rounded-0 whiteCard border-0 text-center text-white" style="background: #86c33a;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid white;">
+                            <h4 class="pb-5"> Popular
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+
+
+                                $49.99
+
+                            </h1>
+                            <h6>BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="greenboxwhiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 rounded-pill">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 year">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $39.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

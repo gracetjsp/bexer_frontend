@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .border-center {
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        input[type="checkbox"] {
+            position: relative;
+            width: 80px;
+            height: 40px;
+            -webkit-appearance: none;
+            background: #86c33a;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+            transition: 0.5s;
+        }
+
+        input:checked[type="checkbox"] {
+            background: #86c33a;
+        }
+
+        input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            background: #fff;
+            transform: scale(0.8);
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+            transition: 0.5s;
+
+        }
+
+        input:checked[type="checkbox"]::before {
+            left: 40px;
+        }
+
+        .monthlyactive a {
+            text-decoration: none !important;
+            background: white;
+            color: #252d39;
+            font-weight: 600;
+        }
+
+        .yearlyactive a {
+            text-decoration: none !important;
+            background: white;
+            color:gray;
+            font-weight: 600;
+
+        }
+
+        .selection-title-green-border {
+            display: block;
+            width: 30px;
+            height: 5px;
+            border-radius: 10px;
+            background: #86c33a;
+            position: relative;
+
+
+        }
+
+        .selection-title-green-border::after {
+            position: absolute;
+            content: '';
+            width: 25%;
+            height: 100%;
+            border-radius: 10px;
+            background: #86c33a;
+            top: 0;
+            right: -100%;
+
+
+        }
+
+        .selection-title-green-border::before {
+            position: absolute;
+            content: '';
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+            background: #86c33a;
+            top: 0;
+            right: -60%;
+
+
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(Barlow/Barlow-Bold.ttf);
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.month').show();
+            $('.year').hide();
+            $('.monthlyactive').click(function () {
+                $('.monthlyactive a').css("color", "#252d39");
+                $('.yearlyactive a').css("color", "gray");
+                $('.month').show();
+                $('.year').hide();
+              $('#check').prop('checked',false); 
+
+            })
+            $('.yearlyactive').click(function ()  {
+                $('.month').hide();
+                $('.year').show();
+                $('.monthlyactive a').css("color", "gray");
+                $('.yearlyactive a').css("color", "#252d39");
+              $('#check').prop('checked',true); 
+            })
+            $('input[type="checkbox"]').click(function(){
+                if($(this).prop("checked") == true){
+                    $('.month').hide();
+                $('.year').show();
+                $('.monthlyactive a').css("color", "gray");
+                $('.yearlyactive a').css("color", "#252d39");
+                
+            }
+            else if($(this).prop("checked") == false){
+                $('.monthlyactive a').css("color", "#252d39");
+                $('.yearlyactive a').css("color", "gray");
+                $('.month').show();
+                $('.year').hide();
+            }
+            });
+           
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div class="row p-0 m-0 text-center">
+            <div class="col-12  text-center pb-5 ">
+                <span class="selection-title-green-border justify-content-between border-center"></span>
+                <h4 class="pt-2" style="color: gray;">Pricing Table </h4>
+                <h1 style="font-weight: 700; font-family:'myFirstFont'">BEST PRICE EVER
+                </h1>
+
+                <ul class="pt-5 greenbutton d-flex flex-row justify-content-center p-0">
+                    <input type="hidden" value="true" id="hiddenValue">
+                    <li class="p-1 pe-3 monthlyactive" style="list-style-type: none;">
+                        <a class="p-3">MOTHLY</a>
+                    </li>
+                    <input type="checkbox" id='check' name="">
+                    <li class="p-1 ps-3 yearlyactive" style="list-style-type: none;">
+                        <a class="p-3">YEARLY</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 month">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $39.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 month">
+                <div class="card rounded-0 whiteCard border-0 text-center text-white" style="background: #86c33a;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid white;">
+                            <h4 class="pb-5"> Popular
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+
+
+                                $49.99
+
+                            </h1>
+                            <h6>BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="greenboxwhiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 rounded-pill">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 month">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $59.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-4 p-md-0 year">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $139.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 year">
+                <div class="card rounded-0 whiteCard border-0 text-center text-white" style="background: #86c33a;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid white;">
+                            <h4 class="pb-5"> Popular
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+
+
+                                $149.99
+
+                            </h1>
+                            <h6>BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="greenboxwhiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 rounded-pill">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 p-md-0 year">
+                <div class="card rounded-0 whiteCard bg-transparent border-0 text-center"
+                    style="border-left: 1px solid rgb(212, 208, 208) !important ;">
+                    <div class="ps-3 pe-3">
+                        <div class="pb-5" style="border-bottom: 1px solid rgb(204, 200, 200);">
+                            <h4 class="pb-5" style="color: gray;">Basic
+                            </h4>
+                            <h1 style="font-weight: 700;font-family:'myFirstFont'">
+                                $159.99
+                            </h1>
+                            <h6> BEST FOR SMALL INDIVIDUALS</h6>
+                        </div>
+                        <ul class="p-0 pt-5 m-0" style="color: gray;">
+                            <li class="pb-5" style="list-style-type:none;"> Express Service</li>
+                            <li class="pb-5" style="list-style-type:none;"> Customs Clearance</li>
+                            <li class="pb-5" style="list-style-type:none;">Time-Critical Services </li>
+                        </ul>
+                        <div class="whiteButton pb-5">
+                            <a class="btn p-3  ps-4 pe-4 border-1 rounded-pill"
+                                style="border-color: rgb(161, 159, 159);">SELECT PLAN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
